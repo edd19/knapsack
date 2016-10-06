@@ -8,13 +8,12 @@ object Main {
     val instanceFile = args(0)
     val (capacity, items) = parseFile(instanceFile)
     val knapsack = new Knapsack(capacity, items)
-    val (max_value, items_value) = knapsack.DP_solver()
+    val (max_value, items_value) = knapsack.Linear_random_solver()
     println(max_value)
     for (item_value <- items_value){
       print(item_value)
       print(" ")
     }
-
   }
 
   /**
